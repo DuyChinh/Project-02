@@ -40,15 +40,43 @@ a {
     border-radius: 999px;
 }
 
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    -webkit-line-clamp: var(--line-clamp, 2);
 }
 
 /* ============== Header ================== */
 .header {
     background-color: #fffcf4;
     padding: 36px 0px 8px;
-    
 }
 
 .fix {
@@ -109,7 +137,7 @@ a {
 
 /* =====Hero====== */
 .hero {
-    padding-top: 56px;
+    padding: 56px 0 0 65px;
     background-color: #fffcf4;
 }
 
@@ -123,10 +151,12 @@ a {
 }
 
 .hero .media-block .hero-img {
+    display: block;
     width: 470px;
     height: 685px;
     border-radius: 20px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .hero .media-block .hero-summary {
@@ -135,7 +165,7 @@ a {
     bottom: 48px;
     background: #ffffff;
     width: 270px;
-    padding: 28px 24px;
+    padding: 24px;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
 }
@@ -188,15 +218,6 @@ a {
 .hero .content-block {
     width: 52%;
     padding: 64px 0 0 130px;
-}
-
-.hero .content-block .heading {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 5.8rem;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-    color: #171100;
 }
 
 .hero .content-block .desc {
@@ -268,4 +289,133 @@ a {
 
 .hero-stats strong:first-child {
     margin-left: -28px;
+}
+/* ==================== Popular =================== */
+
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-top .info .desc {
+    width: 458px;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.popular .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular .control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+}
+
+.popular .control-btn:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.popular .course-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.popular .course-item {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+}
+
+.popular .course-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    margin: -1px;
+    /* che border */
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.popular .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .course-item .foot,
+.popular .course-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .title a {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .course-item .rating {
+    display: flex;
+    align-items: center;
+}
+
+.popular .course-item .rating .value {
+    margin-left: 6px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: var(--primary-color);
+}
+
+.popular .course-item .desc {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.popular .course-item .foot {
+    margin-top: 50px;
+}
+
+.popular .course-item .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .course-item .book-btn {
+    border: none;
+}
+
+.popular .course-item .book-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.popular .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
 }
