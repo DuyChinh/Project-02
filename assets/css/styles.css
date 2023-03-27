@@ -73,6 +73,10 @@ a {
     -webkit-line-clamp: var(--line-clamp, 2);
 }
 
+.break-all {
+    word-break: break-all;
+}
+
 /* ============== Header ================== */
 .header {
     background-color: #fffcf4;
@@ -369,6 +373,7 @@ a {
 }
 
 .popular .course-item .title a {
+    padding-right: 6px;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
@@ -418,4 +423,79 @@ a {
 .popular .course-item:hover {
     border-color: transparent;
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+/* =========== Feedback ============= */
+
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background-color: #2e2100;
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback-item {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.feedback-item .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback-item .info .title {
+    margin-top: 18px;
+    font-family: var(--font-heading), sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    color: #f7f7f7;
+}
+
+.feedback-item .info .desc {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #bfbcb3;
+}
+
+.feedback-item .dots {
+    margin-top: 28px;
+    display: flex;
+    gap: 6px;
+}
+
+.feedback-item .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+}
+
+.feedback-item .active {
+    cursor: pointer;
+    background-color: #ffb900;
+}
+
+.feedback-item .content {
+    width: 66%;
+    margin-left: auto;
+}
+
+.feedback-item blockquote {
+    margin-left: 30px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #ffffff;
 }
